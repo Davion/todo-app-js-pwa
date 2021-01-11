@@ -5,7 +5,7 @@
 }
 
 body{
-	background-image: linear-gradient(120deg, #f6d365, #fda085);
+	background-image: linear-gradient(120deg, #86f9f9, #86a4fd);
 	color: white;
 	font: "Poppins", sans-serif;
 	min-height: 100vh;
@@ -13,6 +13,10 @@ body{
 
 header{
 	font-size: 1.5rem;
+}
+
+header h1, header img{
+	margin: 0.3rem;
 }
 
 header, 
@@ -31,14 +35,14 @@ form input, form button{
 }
 
 form button{
-	color: #d88771;
+	color: #4d79ff;
 	background: white;
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
 
 form button:hover{
-	background: #d88771;
+	background: #4d79ff;
 	color: white;
 }
 
@@ -72,7 +76,7 @@ form button:hover{
 
 .trash-btn, 
 .complete-btn{
-	background: #ff6f47;
+	background: #1a53ff;
 	color: white;
 	border: none;
 	padding: 1rem;
@@ -80,7 +84,7 @@ form button:hover{
 	font-size: 1rem;
 }
 .complete-btn{
-	background: rgb(73, 204, 73);
+	background: #00ffcc;
 }
 
 .todo-item{
@@ -120,7 +124,7 @@ select{
 	overflow: hidden;
 }
 select{
-	color: #ff6f47;
+	color: #1a53ff;
 	font-family: "Poppins", sans-serif;
 	width: 12rem;
 	cursor: pointer;
@@ -131,7 +135,7 @@ select{
 	top: 0;
 	right: 0;
 	padding: 1.2rem;
-	background: #ff6f47;
+	background: #1a53ff;
 	cursor: pointer;
 	pointer-events: none;
 	transition: all 0.3s ease;
@@ -139,5 +143,25 @@ select{
 
 .select:hover::after{
 	background: white;
-	color: #ff6f47;
+	color: #1a53ff;
+}
+
+@media only screen and (max-width: 485px) {
+  form input{
+  	width: 40vh;
+  }
+
+  select{
+  	width: 3.4rem;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  form input{
+  	width: 25vh;
+  }
+
+  select{
+  	width: 3.4rem;
+  }
 }
