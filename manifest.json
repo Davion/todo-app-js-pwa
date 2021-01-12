@@ -1,12 +1,17 @@
 {
   "name": "Your To-Do's",
   "short_name": "Your To-Do's",
-  "start_url": "index.html",
+  "start_url": "https://davion.github.io/todo-app-js-pwa/index.html",
   "display": "standalone",
   "background_color": "#fdfdfd",
   "theme_color": "#86a4fd",
   "orientation": "portrait-primary",
   "icons": [
+    {
+      "src": "/images/maskable-icon-48.png",
+      "type": "image/png", "sizes": "48x48",
+      "purpose": "any maskable"
+    },
     {
       "src": "/images/icon-48.png",
       "type": "image/png", "sizes": "48x48"
