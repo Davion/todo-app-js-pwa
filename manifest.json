@@ -1,7 +1,7 @@
 {
   "name": "Your To-Do's",
   "short_name": "Your To-Do's",
-  "start_url": "https://davion.github.io/todo-app-js-pwa/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#fdfdfd",
   "theme_color": "#86a4fd",
