@@ -21,8 +21,10 @@ self.addEventListener("fetch", fetchEvent => {
   fetchEvent.respondWith(
     caches.match(fetchEvent.request).then(res => {
         return res || fetch(fetchEvent.request).then(networkRes => {
-        cache.put(fetchEvent.request, networkRes.clone());
-        return networkRes;
+        caches.open(yourTodo).then(cashe => {
+          cashe.put(fetchEvent.request, networkRes.clone());
+          return networkRes;
+        })
       });
     });
   );
