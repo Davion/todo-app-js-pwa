@@ -4,13 +4,9 @@ const assets = [
   "/index.html",
   "/style.css",
   "/app.js",
-  "/images/icon-48.png",
-  "/images/android-launchericon-48-48.png",
-  "/images/android-launchericon-72-72.png",
-  "/images/android-launchericon-96-96.png",
-  "/images/android-launchericon-144-144.png",
-  "/images/android-launchericon-192-192.png",
-  "/images/android-launchericon-512-512.png"
+  "https://fonts.gstatic.com",
+  "https://fonts.googleapis.com/css2?family=Poppins&display=swap",
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
 ];
 
 self.addEventListener("install", installEvent => {
