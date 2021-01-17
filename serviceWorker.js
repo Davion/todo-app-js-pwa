@@ -19,13 +19,12 @@ self.addEventListener("install", installEvent => {
 
 self.addEventListener("fetch", fetchEvent => {
   fetchEvent.respondWith(
-    caches.match(fetchEvent.request).then(res => {
-        return res || fetch(fetchEvent.request).then(networkRes => {
-        caches.open(yourTodo).then(cashe => {
-          cashe.put(fetchEvent.request, networkRes.clone());
-          return networkRes;
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.match(fetchEvent.request).then(res => res || fetch(fetchEvent.request)
+        .then(networkRes => {
+          cache.put(evt.request, networkResponse.clone());
+          return networkResponse;
         })
-      });
-    });
-  );
+      )
+    }));
 });
