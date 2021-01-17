@@ -1,9 +1,9 @@
 const yourTodo = "your-to-do-v1";
 const assets = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/app.js",
+  "/todo-app-js-pwa/",
+  "/todo-app-js-pwa/index.html",
+  "/todo-app-js-pwa/style.css",
+  "/todo-app-js-pwa/app.js",
   "https://fonts.gstatic.com",
   "https://fonts.googleapis.com/css2?family=Poppins&display=swap",
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
