@@ -19,7 +19,7 @@ self.addEventListener("install", installEvent => {
 
 self.addEventListener("fetch", fetchEvent => {
   fetchEvent.respondWith(
-    caches.open(CACHE_NAME).then(cache => {
+    caches.open(yourTodo).then(cache => {
       return cache.match(fetchEvent.request).then(res => res || fetch(fetchEvent.request)
         .then(networkRes => {
           cache.put(evt.request, networkResponse.clone());
