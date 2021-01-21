@@ -4,7 +4,7 @@
   "start_url": "/todo-app-js-pwa/index.html",
   "display": "standalone",
   "background_color": "#fdfdfd",
-  "theme_color": "#86a4fd",
+  "theme_color": "#1a53ff",
   "orientation": "portrait-primary",
   "icons": [
     {
