@@ -18,6 +18,10 @@ self.addEventListener("install", installEvent => {
   );
 });
 
+self.addEventListener("activate", activateEvent => {
+  console.log("service worker activated");
+});
+
 self.addEventListener("fetch", fetchEvent => {
   fetchEvent.respondWith(
     caches.open(yourTodo).then(cache => {
