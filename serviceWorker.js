@@ -32,7 +32,7 @@ self.addEventListener("activate", activateEvent => {
 
 self.addEventListener("fetch", fetchEvent => {
   fetchEvent.respondWith(
-    caches.open(yourTodo).then(cache => {
+    caches.open(staticCascheName).then(cache => {
       return cache.match(fetchEvent.request).then(res => res || fetch(fetchEvent.request)
         .then(networkRes => {
           cache.put(fetchEvent.request, networkRes.clone());
