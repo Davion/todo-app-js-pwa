@@ -14,7 +14,7 @@ self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
     caches.open(staticCascheName).then(cache => {
       cache.addAll(assets);
-    }).catch(err => console.log("issue caching assets - ", err));
+    }).catch(err => console.log("issue caching assets - ", err))
   );
 });
 
