@@ -1,4 +1,4 @@
-const staticCascheName = "todo-app-static-v1";
+const staticCascheName = "todo-app-static-v2";
 const assets = [
   "/todo-app-js-pwa/",
   "/todo-app-js-pwa/index.html",
@@ -14,7 +14,7 @@ self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
     caches.open(staticCascheName).then(cache => {
       cache.addAll(assets);
-    })
+    }).catch(err => console.log("issue caching assets - ", err));
   );
 });
 
