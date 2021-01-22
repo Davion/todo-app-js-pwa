@@ -12,7 +12,7 @@ const assets = [
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
-    caches.open(yourTodo).then(cache => {
+    caches.open(staticCascheName).then(cache => {
       cache.addAll(assets);
     })
   );
