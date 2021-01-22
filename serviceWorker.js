@@ -1,4 +1,4 @@
-const staticCascheName = "todo-app-static-v2";
+const staticCascheName = "todo-app-static-v3";
 const assets = [
   "/todo-app-js-pwa/",
   "/todo-app-js-pwa/index.html",
