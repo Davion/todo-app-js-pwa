@@ -1,4 +1,4 @@
-const yourTodo = "your-to-do-v1";
+const staticCascheName = "todo-app-static-v1";
 const assets = [
   "/todo-app-js-pwa/",
   "/todo-app-js-pwa/index.html",
@@ -19,7 +19,15 @@ self.addEventListener("install", installEvent => {
 });
 
 self.addEventListener("activate", activateEvent => {
-  console.log("service worker activated");
+  //console.log("service worker activated");
+  activateEvent.waitUntil(
+    caches.keys().then(keys => {
+      return Promise.all(keys
+        .filter(key => key !== staticCascheName)
+        .map(key => caches.delete())
+      )
+    })
+  );
 });
 
 self.addEventListener("fetch", fetchEvent => {
