@@ -14,7 +14,7 @@ self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
     caches.open(staticCascheName).then(cache => {
       cache.addAll(assets);
-    }).catch(err => console.log("issue caching assets - ", err))
+    }).catch(err => console.log("issue caching assets on install - ", err))
   );
 });
 
@@ -26,7 +26,7 @@ self.addEventListener("activate", activateEvent => {
         .filter(key => key !== staticCascheName)
         .map(key => caches.delete(key))
       )
-    })
+    })catch(err => console.log("issue getting cacheKeys on activate - ", err))
   );
 });
 
@@ -39,5 +39,6 @@ self.addEventListener("fetch", fetchEvent => {
           return networkRes;
         })
       )
-    }));
+    })catch(err => console.log("issue opening cache on fetch - ", err))
+  );
 });
