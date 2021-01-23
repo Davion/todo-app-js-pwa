@@ -26,7 +26,7 @@ self.addEventListener("activate", activateEvent => {
         .filter(key => key !== staticCascheName)
         .map(key => caches.delete(key))
       )
-    })catch(err => console.log("issue getting cacheKeys on activate - ", err))
+    }).catch(err => console.log("issue getting cacheKeys on activate - ", err))
   );
 });
 
@@ -39,6 +39,6 @@ self.addEventListener("fetch", fetchEvent => {
           return networkRes;
         })
       )
-    })catch(err => console.log("issue opening cache on fetch - ", err))
+    }).catch(err => console.log("issue opening cache on fetch - ", err))
   );
 });
