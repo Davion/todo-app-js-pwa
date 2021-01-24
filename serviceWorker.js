@@ -1,4 +1,4 @@
-const staticCascheName = "todo-app-static-v4";
+const staticCascheName = "todo-app-static-v5";
 const assets = [
   "/todo-app-js-pwa/",
   "/todo-app-js-pwa/index.html",
@@ -39,11 +39,11 @@ self.addEventListener("fetch", fetchEvent => {
           cache.put(fetchEvent.request, networkRes.clone());
           return networkRes;
         })
-      )
-    }).catch(() => {
-      if(fetchEvent.request.url.indexOf(".html") > -1){
-        return caches.match("/todo-app-js-pwa/fallback.html")
-      }
-    })
+      ).catch(() => {
+        if(fetchEvent.request.url.indexOf(".html") > -1){
+          return caches.match("/todo-app-js-pwa/fallback.html");
+        }
+      })
+    }).catch(err => console.log("issue opening cache on fetch", err))
   );
 });
