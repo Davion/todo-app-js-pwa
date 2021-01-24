@@ -21,25 +21,15 @@
 		<img src="images/icon-48.png" alt="Todo image" width="50" height="50">
 		<h1>Your To-Do's</h1>
 	</header>
-	<form>
-		<input type="text" aria-label="Todo input" class="todo-input">
-		<button class="todo-button" name="Add-todo-button" aria-label="Add todo button" type="submit">
-			<i class="fas fa-plus-square"></i>
-		</button>
-		<div class="select">
-			<select name="todos" aria-label="Todo search" class="filter-todo">
-				<option value="all">All</option>
-				<option value="completed">Completed</option>
-				<option value="uncompleted">Uncompleted</option>
-			</select>
-		</div>
-	</form>
-	<div class="todo-container">
-		<ul class="todo-list"></ul>
+	
+	<div class="fallback-container">
+		<h1>OOPS!</h1>
+	    <p>Currently you can't view this page without a connection.</p>
+	    <a href="/todo-app-js-pwa/" class="back-to-app-button">Go back to App</a>
 	</div>
 
 	<footer class="footer">
-		Created by <a class="name-color" href="https://github.com/Davion"> Klajdi </a> 2021.
+		Created by <span> Klajdi </span> 2021.
 	</footer>
 
 	<script type="text/javascript" src="./app.js"></script>
