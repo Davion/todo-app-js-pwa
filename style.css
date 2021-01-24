@@ -191,6 +191,47 @@ select{
 	margin: 0.25rem;
 }
 
+.footer span {
+	color: #1a53ff;
+	font-weight: bold;
+	margin: 0.25rem;
+}
 
 
-/*#86b0fc -- footer bg color*/
+.fallback-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	color: #1a53ff;
+	font-weight: 900;
+}
+
+.fallback-container h1{
+	font-weight: 900;
+	margin-bottom: 2rem;
+}
+
+.back-to-app-button {
+	margin-top: 1.5rem;
+	display: inline-block;
+	text-decoration: none;
+	line-height: 1;
+	padding: 0.5rem 1.5rem;
+	background-color: #4da6ff;
+	color: #1a53ff;
+	outline: 2px solid #1a53ff;
+	border: 2px solid #1a53ff;
+	transition: outline-offset 100ms ease;
+
+}
+
+.back-to-app-button:hover,
+.back-to-app-button:focus{
+	outline-offset: -4px;
+}
+
+.back-to-app-button:visited{
+	color: #1a53ff;
+}
