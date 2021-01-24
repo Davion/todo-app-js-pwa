@@ -165,3 +165,32 @@ select{
   	width: 3.4rem;
   }
 }
+
+
+
+.footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: #4da6ff;
+	height: 6.55vh;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: .9375rem;
+	font-weight: 400;
+	line-height: 1.25rem;
+	padding: 1.25rem;
+}
+
+.footer a:link, a:visited {
+	color: #1a53ff;
+	font-weight: bold;
+	margin: 0.25rem;
+}
+
+
+
+/*#86b0fc -- footer bg color*/
