@@ -5,7 +5,6 @@ const assets = [
   "/todo-app-js-pwa/style.css",
   "/todo-app-js-pwa/app.js",
   "/todo-app-js-pwa/fallback.html",
-  "https://fonts.gstatic.com",
   "https://fonts.googleapis.com/css2?family=Poppins&display=swap",
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css",
   "https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJnecmNE.woff2"
