@@ -15,14 +15,16 @@ self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
     caches.open(staticCascheName).then(cache => {
       cache.addAll(assets);
+      console.log("service worker installed -- assets cached");
     }).catch(err => console.log("issue caching assets on install - ", err))
   );
 });
 
 self.addEventListener("activate", activateEvent => {
-  //console.log("service worker activated");
+  // console.log("service worker activated");
   activateEvent.waitUntil(
     caches.keys().then(keys => {
+      console.log("service worker activated");
       return Promise.all(keys
         .filter(key => key !== staticCascheName)
         .map(key => caches.delete(key))
@@ -34,8 +36,10 @@ self.addEventListener("activate", activateEvent => {
 self.addEventListener("fetch", fetchEvent => {
   fetchEvent.respondWith(
     caches.open(staticCascheName).then(cache => {
+      console.log("fetching from service worker");
       return cache.match(fetchEvent.request).then(res => res || fetch(fetchEvent.request)
         .then(networkRes => {
+          console.log("puting network response to cache");
           cache.put(fetchEvent.request, networkRes.clone());
           return networkRes;
         })
