@@ -47,6 +47,8 @@ form button:hover{
 }
 
 .todo-container{
+	height: 23rem;
+	overflow-y: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -55,6 +57,7 @@ form button:hover{
 .todo-list{
 	min-width: 30%;
 	list-style: none;
+	height: inherit;
 }
 
 .todo{
@@ -146,28 +149,33 @@ select{
 	color: #1a53ff;
 }
 
-@media only screen and (max-width: 485px) {
-  form input{
-  	width: 40vh;
-  }
-
-  select{
-  	width: 3.4rem;
-  }
+/*=======CLEAR-ALL=========*/
+.clear-all-container{
+	height: 8.1rem;
+	margin: 2px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-@media only screen and (max-width: 430px) {
-  form input{
-  	width: 25vh;
-  }
-
-  select{
-  	width: 3.4rem;
-  }
+.clear-all-btn{
+	display: inline-block;
+	border: none;
+	padding: 1.2rem;
+	background: #1a53ff;
+	color: #fff;
+	outline: 2px solid #1a53ff;
+	cursor: pointer;
+	transition: background 0.3s ease, outline-offset 0.1s ease;
 }
 
-
-
+.clear-all-btn:hover,
+.clear-all-btn:focus{
+	background: #fff;
+	color: #1a53ff;
+	outline-offset: -4px;
+}
+/*========FOOTER============*/
 .footer{
 	position: fixed;
 	left: 0;
@@ -198,6 +206,7 @@ select{
 }
 
 
+/*========FALLBACK-PAGE==========*/
 .fallback-container{
 	display: flex;
 	flex-direction: column;
@@ -234,4 +243,41 @@ select{
 
 .back-to-app-button:visited{
 	color: #1a53ff;
+}
+
+
+
+/*=======RESPONSIVE========*/
+@media only screen and (max-width: 540px) {
+  form input{
+  	width: 25vh;
+  }
+
+  select{
+  	width: 3.4rem;
+  }
+
+  .todo-list{
+  	min-width: 80%;
+  }
+
+  .clear-all-container{
+  	height: 4rem;
+  }
+
+  .clear-all-btn{
+  	padding: 0.5rem 1.5rem;
+  }
+}
+
+@media only screen and (max-height: 740px){
+	.todo-container{
+		height: 20rem;
+	}
+}
+
+@media only screen and (max-height: 730px){
+	.todo-container{
+		height: 17rem;
+	}
 }
