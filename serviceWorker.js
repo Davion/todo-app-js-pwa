@@ -43,7 +43,7 @@ self.addEventListener("fetch", fetchEvent => {
           return networkRes;
         })
       ).catch(() => {
-        if(fetchEvent.request.url.indexOf(".html") > -1){
+        if(fetchEvent.request.url.indexOf(".html") > -1 || fetchEvent.request.url === "https://github.com/Davion"){
           return caches.match("/todo-app-js-pwa/fallback.html");
         }
       })
