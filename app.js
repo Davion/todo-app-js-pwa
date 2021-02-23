@@ -9,7 +9,7 @@ const clearAllButton = document.querySelector(".clear-all-btn");
 document.addEventListener("DOMContentLoaded", getTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
-filterOption.addEventListener("click", filterTodo);
+filterOption.addEventListener("change", filterTodo);
 clearAllButton.addEventListener("click", clearTodos);
 
 //Functions
